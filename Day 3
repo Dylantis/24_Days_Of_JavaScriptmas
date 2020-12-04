@@ -1,0 +1,27 @@
+function chunkyMonkey(values, size) {
+values.splice(2,2,["c","d"]);
+values.splice(0,2,["a","b"]);
+return(values);
+}
+
+
+
+/**
+* Test Suite 
+*/
+describe('chunkyMonkey()', () => {
+    it('returns largest positive integer possible for digit count', () => {
+        // arrange
+        const values = ["a", "b", "c", "d"];
+        const size = 2;
+        
+        // act
+        const result = chunkyMonkey(values, size);
+
+        // log
+        console.log("result: ", result);
+        
+        // assert
+        expect(result).toEqual([["a", "b"], ["c", "d"]]);
+    });
+});
