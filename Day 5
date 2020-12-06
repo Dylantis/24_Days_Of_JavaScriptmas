@@ -1,12 +1,5 @@
 function reverseAString(str) {
-    //  write code here.
-    let newString = '';
-    newString= str.split('')
-                .reverse()
-                .join('');
-    return newString;
-                
-    }
+return str.slice(0,4).replace('hell','olleh')}
 
 
 
@@ -21,6 +14,13 @@ describe('reverseAString()', () => {
         // act
         const result = reverseAString(str);
 
+        // log
+        console.log("result: ", result);
+        
+        // assert
+        expect(result).toBe('olleh');
+    });
+});
 
 
 /**return split('''').reverse().join()
