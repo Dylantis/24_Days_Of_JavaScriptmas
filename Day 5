@@ -1,0 +1,22 @@
+function reverseAString(str) {
+    //  write code here.
+    let newString = '';
+    newString= str.split('')
+                .reverse()
+                .join('');
+    return newString;
+                
+    }
+
+
+
+/**
+* Test Suite 
+*/
+describe('reverseAString()', () => {
+    it('returns original string reversed', () => {
+        // arrange
+        const str = 'hello';
+        
+        // act
+        const result = reverseAString(str);
